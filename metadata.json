@@ -1,6 +1,6 @@
 {
-  "name": "ZenTrack",
-  "description": "A mindful activity tracker with active second tickers, logs summary dashboard, custom color schemes, and recursive interval reminders.",
+  "name": "GetItDone",
+  "description": "An action-oriented task and goal tracker to make sure you get things done, supporting custom schedules and recursive interval alerts.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

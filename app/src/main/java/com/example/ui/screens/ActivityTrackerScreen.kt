@@ -44,8 +44,8 @@ import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Schedule
-import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.Timer
@@ -120,7 +120,7 @@ val IconOptions = listOf(
     "water_drop" to Icons.Default.LocalDrink,
     "fitness_center" to Icons.Default.FitnessCenter,
     "menu_book" to Icons.Default.MenuBook,
-    "spa" to Icons.Default.SelfImprovement,
+    "check_circle" to Icons.Default.CheckCircle,
     "laptop" to Icons.Default.Laptop,
     "star" to Icons.Default.Star
 )
@@ -183,14 +183,14 @@ fun ActivityTrackerScreen(
             ) {
                 Column {
                     Text(
-                        text = "ZenTrack",
+                        text = "GetItDone",
                         color = MaterialTheme.colorScheme.onBackground,
                         fontSize = 28.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = (-0.5).sp
                     )
                     Text(
-                        text = "Mindful Activity Tracking",
+                        text = "Track Tasks & Get Things Done",
                         color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f),
                         fontSize = 14.sp
                     )
@@ -258,7 +258,7 @@ fun ActivityTrackerScreen(
                 // Section Title
                 item {
                     Text(
-                        text = "YOUR ACTIVITIES",
+                        text = "YOUR ACTIVE GOALS",
                         color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f),
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
@@ -393,7 +393,7 @@ fun DashboardSummary(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Mindfulness Journey",
+                    text = "Daily Productivity",
                     fontSize = 20.sp,
                     color = MaterialTheme.colorScheme.onSurface,
                     fontWeight = FontWeight.Bold
@@ -494,14 +494,14 @@ fun EmptyCategoriesState(onCreateClick: () -> Unit) {
             verticalArrangement = Arrangement.Center
         ) {
             Icon(
-                imageVector = Icons.Default.SelfImprovement,
+                imageVector = Icons.Default.CheckCircle,
                 contentDescription = "Empty",
                 tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
                 modifier = Modifier.size(64.dp)
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "No Activities Initiated",
+                text = "No Goals Active Yet",
                 color = MaterialTheme.colorScheme.onSurface,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
@@ -509,7 +509,7 @@ fun EmptyCategoriesState(onCreateClick: () -> Unit) {
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = "Add categories (e.g., Drink Water, Cardio, Code) to log your times and set up interval reminders.",
+                text = "Add goals (e.g., Drink Water, Gym, Coding) to log your progress and set up recurring intervals.",
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 fontSize = 13.sp,
                 textAlign = TextAlign.Center,
@@ -907,7 +907,7 @@ fun AddEditCategoryDialog(
                     .padding(24.dp)
             ) {
                 Text(
-                    text = if (category == null) "CREATE CATEGORY" else "EDIT CATEGORY",
+                    text = if (category == null) "CREATE GOAL" else "EDIT GOAL",
                     color = MaterialTheme.colorScheme.onSurface,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
@@ -920,7 +920,7 @@ fun AddEditCategoryDialog(
                 OutlinedTextField(
                     value = name,
                     onValueChange = { name = it },
-                    label = { Text("Category Name", color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)) },
+                    label = { Text("Goal Name", color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)) },
                     singleLine = true,
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedTextColor = MaterialTheme.colorScheme.onSurface,
