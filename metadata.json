@@ -1,0 +1,6 @@
+{
+  "name": "ZenTrack",
+  "description": "A mindful activity tracker with active second tickers, logs summary dashboard, custom color schemes, and recursive interval reminders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
